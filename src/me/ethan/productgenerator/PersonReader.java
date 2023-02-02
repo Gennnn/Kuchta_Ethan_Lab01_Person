@@ -49,7 +49,7 @@ public class PersonReader {
             if (cellLength < 5) {
                 cellLength = 5;
             }
-            int rowLength = ("| " + " | " + " | " + " | " + " |").length() + ( cellLength*5 );
+            int rowLength = ("| " + " | " +  " | " + " | " + " | " + " |").length() + ( cellLength*5 );
             for (int i = 0; i < rowLength; i++) {
                 System.out.print("-");
             }
