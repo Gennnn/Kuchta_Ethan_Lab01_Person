@@ -140,14 +140,14 @@ public class PersonReader {
                         while (titleString.length() < cellLength) {
                             titleString = titleString + " ";
                         }
-                        titlePrintString = " | " + titleString + " |";
+                        titlePrintString = " | " + titleString;
 
                     } else if (k==4) {
                         String birthYearString = Integer.toString(personArray.get(i).getBirthYear());
                         while (birthYearString.length() < cellLength) {
                             birthYearString = birthYearString + " ";
                         }
-                        titlePrintString = " | " + birthYearString + " |";
+                        birthYearPrintString = " | " + birthYearString + " |";
 
                     }
 

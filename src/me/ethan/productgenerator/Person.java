@@ -1,6 +1,7 @@
 package me.ethan.productgenerator;
 
 import java.time.Year;
+import java.util.Objects;
 
 public class Person {
 
@@ -104,5 +105,18 @@ public class Person {
 
     public String toCSVDataRecord() {
         return ID + ", " + firstName + ", " + lastName + ", " + title + ", " + birthYear;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return ID == person.ID && birthYear == person.birthYear && firstName.equals(person.firstName) && lastName.equals(person.lastName) && title.equals(person.title);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ID, firstName, lastName, title, birthYear);
     }
 }

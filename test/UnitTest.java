@@ -79,7 +79,7 @@ public class UnitTest {
         p1.setLastName("Buck");
         p1.setTitle("Mrs.");
         p1.setBirthYear(1999);
-        assertEquals(true, p1.toCSVDataRecord().equals(p2.toCSVDataRecord()));
+        assertEquals(true, p1.equals(p2));
 
 
     }
